@@ -61,13 +61,21 @@ bot.on('chatMessageCreate', async (user, message) => {
 
     } catch (error) {
  
-      bot.whisper.send(user.id, `Something went wrong, please contact @Xion.3`)
+      bot.whisper.send(user.id, `Something went wrong, please contact @Atekinz`)
       console.error(error)
     }
   }
 //send a custom message by saying someone user name or saying a specific word (can be done multiple time, consult Examples.js)
   if (message.startsWith(`Emote`)) {
-   bot.message.send(`1-89 arası emote kodu, daha fazlası için BİO'yu kontrol et ${user.username} `);
+   bot.message.send(`1-89 arası emote kodu bulunmakta ${user.username} `);
+
+
+  };
+
+  //send a custom message by saying someone user name or saying a specific word (can be done multiple time, consult Examples.js)
+  if (message.startsWith(`Bilgi`)) {
+   bot.message.send(`Oyunumuzun ismi ' Son Çıkan Kazanır ' amacınız sadece odadan hiç bir şekilde ayrılmadan sona kalmak. ${user.username} `);
+
 
   };
 //get the bot uptime by saying '${prefix}uptime'
@@ -330,7 +338,7 @@ bot.on('tipReactionCreate', (sender, receiver, item) => {
 bot.on('playerJoin', async (user) => {
   console.log(`[playerJoin]: ${user.username}(${user.id}) Hoşgeldin !`);
 
-  if (user.username === 'OnurV') {
+  if (user.username === 'Atekinz') {
     bot.message.send("yapımcım odaya katıldı ❤️")
   }
   const randomMessage = await getRandomWelcomeMessage()
@@ -346,11 +354,8 @@ bot.on('playerJoin', (user) => {
 //deneme
 // Gönderilecek mesajlar dizisi
 const messages = [
- "Kokteyl alır mısınız? 🍹",
-  "Hey, günün iyi geçiyordur umarım o halde bira ile kutlayalım! 🍻",
-  "Viskiye ne dersin? 🥃",
-  "Soğuk bira hemen geliyor!",
-  "Kokteyl hazırlanıyor!"
+ "Oyun hakkında bilgi almak için ' Bilgi ' yaz !",
+  "Odaya grab eklemek için @RotiiMikii ile iletişime geçin! "
 ];
 
 // Her 15 saniyede bir mesajı gönder
