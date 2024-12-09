@@ -354,8 +354,8 @@ bot.on('playerJoin', (user) => {
 //deneme
 // Gönderilecek mesajlar dizisi
 const messages = [
- "Oyun hakkında bilgi almak için ' Bilgi ' yaz !",
-  "Odaya grab eklemek için @RotiiMikii ile iletişime geçin! "
+ "Spin Grab",
+  "Follow Room Owner ♥️"
 ];
 
 // Her 15 saniyede bir mesajı gönder
